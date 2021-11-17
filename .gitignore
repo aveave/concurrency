@@ -1,0 +1,13 @@
+.idea
+*.iml
+.gradle
+build
+out
+gen
+target
+compiler.xml
+.m2
+enviroments.env
+.mvn
+.flattened-pom.xml
+/.idea/

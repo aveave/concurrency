@@ -1,10 +1,9 @@
 package race.condition;
 
-import java.util.concurrent.atomic.AtomicInteger;
-
 public class Main {
 
     public static void main(String[] args) throws InterruptedException {
+
         InventoryCounter inventoryCounter = new InventoryCounter();
         IncrementingThread incrementingThread = new IncrementingThread(inventoryCounter);
         DecrementingThread decrementingThread = new DecrementingThread(inventoryCounter);
@@ -52,18 +51,18 @@ public class Main {
     }
 
     private static class InventoryCounter {
-        private int items;
+        private int temp;
 
         public void increment() {
-            items++;
+            temp++;
         }
 
         public void decrement() {
-            items--;
+            temp--;
         }
 
         public int getItems() {
-            return items;
+            return temp;
         }
     }
 
