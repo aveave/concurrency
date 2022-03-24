@@ -9,6 +9,12 @@ import java.util.concurrent.ExecutionException;
 public class CompletableFutureResearch {
 
     public static void main(String[] args) throws InterruptedException {
+
+        CompletableFuture<Integer> completableFuture = CompletableFuture.completedFuture(1);
+        CompletableFuture<Integer> completableFuture1 = new CompletableFuture<>();
+        CompletableFuture<Integer> failed = CompletableFuture.failedFuture(new ArithmeticException("Oi"));
+
+
 //        testCompletableFuture();
 //        testCompletableFutureSupplyAsync();
         testCompletableFutureWithThen();
